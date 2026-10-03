@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src https://docs.google.com; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#1C1E1B">
+<title>Help shape Prepline – 1-min survey</title>
+<meta name="description" content="A one-minute anonymous survey about kitchen prep lists, for Prepline by Autoprod.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{--ink:#1C1E1B; --soft:#5C5F58; --cream:#F6F1E7; --bg:#EDEAE2; --line:#D9D2C3; --accent:#8A6A3D; --accent-d:#6F5430; --err:#A23B2A;}
+  *{box-sizing:border-box;}
+  html,body{margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; -webkit-text-size-adjust:100%;}
+  header{background:var(--ink); color:var(--cream); padding:18px 18px 16px;}
+  .brand{font:700 22px/1 Georgia,Cambria,"Times New Roman",serif; letter-spacing:-.01em;}
+  .brand small{display:block; font:600 11px/1.4 system-ui,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:#CFC8B8; margin-top:6px;}
+  main{max-width:640px; margin:0 auto; padding:18px 14px 40px;}
+  h1{font:700 28px/1.15 Georgia,Cambria,"Times New Roman",serif; margin:4px 0 6px;}
+  .intro{color:var(--soft); margin:0 0 16px;}
+  fieldset{border:1px solid var(--line); background:#fff; border-radius:14px; padding:14px 14px 10px; margin:0 0 14px;}
+  legend{font-weight:700; padding:0 6px; font-size:16.5px;}
+  .hint{font-weight:400; color:var(--soft); font-size:13px;}
+  .req{color:var(--accent); font-weight:700;}
+  label.opt{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:4px 0; border-radius:10px; border:1px solid transparent; cursor:pointer; min-height:46px;}
+  label.opt:hover{background:var(--cream);}
+  label.opt input{width:20px; height:20px; accent-color:var(--accent); flex:0 0 auto; margin:0;}
+  label.opt:has(input:checked){background:var(--cream); border-color:var(--line);}
+  input[type=text],input[type=email]{width:100%; font:inherit; padding:11px 12px; border:1px solid var(--line); border-radius:10px; background:#fff;}
+  input[type=text]:focus,input[type=email]:focus{outline:2px solid var(--accent); outline-offset:1px;}
+  .other{margin:2px 0 6px 40px; width:calc(100% - 40px) !important; display:none;}
+  .other.show{display:block;}
+  .err-msg{color:var(--err); font-size:13.5px; margin:4px 2px 0; display:none;}
+  fieldset.bad{border-color:var(--err);} fieldset.bad .err-msg{display:block;}
+  .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+  button.send{width:100%; font:700 17px/1 system-ui,sans-serif; padding:16px; border:0; border-radius:12px; background:var(--accent); color:#fff; cursor:pointer;}
+  button.send:hover{background:var(--accent-d);} button.send:disabled{opacity:.6; cursor:wait;}
+  .privacy{font-size:13px; color:var(--soft); margin:12px 2px 0;}
+  #status{margin-top:10px; font-size:14px; color:var(--err); min-height:1em;}
+  #thanks{display:none; background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px 18px; text-align:center;}
+  #thanks h2{font:700 26px/1.2 Georgia,Cambria,serif; margin:0 0 8px;}
+  #thanks a.app{display:inline-block; margin-top:12px; background:var(--ink); color:var(--cream); padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700;}
+  #thanks .preview{margin-top:14px; font-size:12.5px; color:var(--soft);}
+  footer{text-align:center; font-size:12.5px; color:var(--soft); padding:0 14px 30px;}
+  footer a{color:var(--soft);}
+  @media (min-width:700px){ main{padding-top:28px;} h1{font-size:32px;} }
+</style>
+</head>
+<body>
+<header><div class="brand">Prepline<small>Kitchen prep list organiser · by Autoprod</small></div></header>
+<main>
+  <form id="survey" novalidate>
+    <h1>Help shape Prepline</h1>
+    <p class="intro">Prepline is a free kitchen prep-list organiser. A few quick taps (about a minute) tell us what would actually help on your section. Anonymous, no sign-in.</p>
+
+    <fieldset data-name="role" data-required>
+      <legend>1. What's your role? <span class="req">*</span></legend>
+      <label class="opt"><input type="radio" name="role" value="head_chef"> Head chef</label>
+      <label class="opt"><input type="radio" name="role" value="sous_chef"> Sous chef</label>
+      <label class="opt"><input type="radio" name="role" value="cdp"> Chef de partie (CDP)</label>
+      <label class="opt"><input type="radio" name="role" value="commis"> Commis / apprentice</label>
+      <label class="opt"><input type="radio" name="role" value="cook"> Cook</label>
+      <label class="opt"><input type="radio" name="role" value="kitchen_hand"> Kitchen hand</label>
+      <label class="opt"><input type="radio" name="role" value="owner_manager"> Owner / manager</label>
+      <label class="opt"><input type="radio" name="role" value="other" data-other="role_other"> Other</label>
+      <input type="text" class="other" id="role_other" name="role_other" maxlength="80" placeholder="Your role" aria-label="Other role">
+      <div class="err-msg">Pick one.</div>
+    </fieldset>
+
+    <fieldset data-name="kitchen" data-required>
+      <legend>2. What kind of kitchen? <span class="req">*</span></legend>
+      <label class="opt"><input type="radio" name="kitchen" value="restaurant"> Restaurant</label>
+      <label class="opt"><input type="radio" name="kitchen" value="hotel_banquet_events"> Hotel / banquet / events</label>
+      <label class="opt"><input type="radio" name="kitchen" value="cafe"> Café</label>
+      <label class="opt"><input type="radio" name="kitchen" value="catering"> Catering</label>
+      <label class="opt"><input type="radio" name="kitchen" value="pub_club"> Pub / club</label>
+      <label class="opt"><input type="radio" name="kitchen" value="qsr"> QSR / fast food</label>
+      <label class="opt"><input type="radio" name="kitchen" value="institutional"> Institutional (hospital, aged care, school, mine site)</label>
+      <div class="err-msg">Pick one.</div>
+    </fieldset>
+
+    <fieldset data-name="prep_now">
+      <legend>3. How do you do prep lists now? <span class="hint">Pick any</span></legend>
+      <label class="opt"><input type="checkbox" name="prep_now" value="paper"> Paper</label>
+      <label class="opt"><input type="checkbox" name="prep_now" value="whiteboard"> Whiteboard</label>
+      <label class="opt"><input type="checkbox" name="prep_now" value="excel_sheets"> Excel / Google Sheets</label>
+      <label class="opt"><input type="checkbox" name="prep_now" value="app"> An app</label>
+      <label class="opt"><input type="checkbox" name="prep_now" value="in_my_head"> In my head</label>
+    </fieldset>
+
+    <fieldset data-name="headaches" data-max="3">
+      <legend>4. Biggest prep-list headaches? <span class="hint">Pick up to 3</span></legend>
+      <label class="opt"><input type="checkbox" name="headaches" value="rewriting_daily"> Rewriting the list every day</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="scaling_pax"> Scaling recipes to pax / covers</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="who_does_what"> Knowing who does what on which section</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="ordering"> Working out what to order from suppliers</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="missed_items"> Missed or forgotten items</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="allergens"> Allergens and dietaries</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="food_cost"> Keeping food cost under control</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="handover"> Handover between shifts</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="lost_wet_unreadable"> Lists get lost, wet or unreadable</label>
+      <label class="opt"><input type="checkbox" name="headaches" value="other" data-other="headache_other"> Other</label>
+      <input type="text" class="other" id="headache_other" name="headache_other" maxlength="120" placeholder="What else?" aria-label="Other headache">
+      <div class="err-msg">Up to 3, please.</div>
+    </fieldset>
+
+    <fieldset data-name="features">
+      <legend>5. Which features would you actually use? <span class="hint">Pick any</span></legend>
+      <label class="opt"><input type="checkbox" name="features" value="auto_sort_import"> Auto-sorted prep list from a menu, PDF or spreadsheet</label>
+      <label class="opt"><input type="checkbox" name="features" value="pax_scaling"> Pax scaling</label>
+      <label class="opt"><input type="checkbox" name="features" value="supplier_order_sheet"> Supplier order sheet</label>
+      <label class="opt"><input type="checkbox" name="features" value="cost_per_dish"> Cost per dish</label>
+      <label class="opt"><input type="checkbox" name="features" value="allergen_tags"> Allergen tags</label>
+      <label class="opt"><input type="checkbox" name="features" value="team_share_qr_link"> Team share via QR code / link</label>
+      <label class="opt"><input type="checkbox" name="features" value="print_one_page"> Print on one page</label>
+      <label class="opt"><input type="checkbox" name="features" value="excel_export"> Excel export</label>
+      <label class="opt"><input type="checkbox" name="features" value="works_offline"> Works offline</label>
+    </fieldset>
+
+    <fieldset data-name="would_pay" data-required>
+      <legend>6. Would you pay for a tool like this? <span class="req">*</span></legend>
+      <label class="opt"><input type="radio" name="would_pay" value="yes"> Yes</label>
+      <label class="opt"><input type="radio" name="would_pay" value="maybe"> Maybe</label>
+      <label class="opt"><input type="radio" name="would_pay" value="no"> No</label>
+      <div class="err-msg">Pick one.</div>
+    </fieldset>
+
+    <fieldset data-name="pricing">
+      <legend>7. Which pricing suits you best?</legend>
+      <label class="opt"><input type="radio" name="pricing" value="monthly_5_10"> A$5–10 a month</label>
+      <label class="opt"><input type="radio" name="pricing" value="oneoff_59_79"> One-off A$59–79</label>
+      <label class="opt"><input type="radio" name="pricing" value="kitchen_199_year"> Kitchen licence, about A$199 a year</label>
+      <label class="opt"><input type="radio" name="pricing" value="free_only"> Free only</label>
+    </fieldset>
+
+    <fieldset data-name="email">
+      <legend>8. Want early access? <span class="hint">Optional</span></legend>
+      <input type="email" name="email" id="email" maxlength="120" autocomplete="email" placeholder="you@example.com" aria-label="Email for early access (optional)">
+      <p class="hint" style="margin:8px 2px 4px;">Only used to send you early access. Never shared. Skip it to stay fully anonymous.</p>
+      <div class="err-msg">That email doesn't look right (or leave it blank).</div>
+    </fieldset>
+
+    <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button type="submit" class="send" id="sendBtn">Send answers</button>
+    <div id="status" role="status" aria-live="polite"></div>
+    <p id="fallback" hidden style="margin:8px 2px 0; font-size:14px;">Couldn't send from this page. <a id="fallbackLink" href="#" target="_blank" rel="noopener">Open the survey in Google Forms</a> (your answers are filled in; just press Submit there).</p>
+    <p class="privacy">No sign-in, no cookies, no trackers on this page. Your answers go to a private Autoprod Google Sheet (via Google Forms, email collection off), together with which link you opened (for example "from the app" or "from a printout"). Nothing else.</p>
+  </form>
+
+  <div id="thanks" role="status" aria-live="polite" tabindex="-1">
+    <h2>Cheers, that's really useful.</h2>
+    <p>Your answers help decide what Prepline does next.</p>
+    <a class="app" href="https://autoprod-dev.github.io/preplist-sorter/" rel="noopener">Try Prepline free</a>
+    <div class="preview" id="previewNote" hidden>Preview copy: no answer endpoint is set, so nothing was sent.</div>
+  </div>
+</main>
+<footer>Prepline by Autoprod · <a href="https://autoprod-dev.github.io/preplist-sorter/" rel="noopener">autoprod-dev.github.io/preplist-sorter</a><br>Questions or feedback: <a href="mailto:autoprod.help@gmail.com?subject=Prepline%20survey">autoprod.help@gmail.com</a></footer>
+<script>
+// Where answers go: a Google Form owned by Autoprod (email collection off, no sign-in; responses land in a
+// private Google Sheet). ENDPOINT is the form's formResponse URL. Empty = preview mode: the form validates and
+// shows the thank-you, but nothing is sent anywhere.
+const ENDPOINT = 'https://docs.google.com/forms/d/e/1FAIpQLSfCPEyxAr574UJbiRDNv9KDwemhH43WYo-aQJ2cbDMQZT1UrA/formResponse';
+const FORM_VIEW = 'https://docs.google.com/forms/d/e/1FAIpQLSfCPEyxAr574UJbiRDNv9KDwemhH43WYo-aQJ2cbDMQZT1UrA/viewform';
+const SURVEY_ID = 'prepline-2026-10', SURVEY_VERSION = 'v1';
+const ENTRY = {role: 'entry.802621020', kitchen: 'entry.1566379240', prep_now: 'entry.983540848', headaches: 'entry.537160753',
+  features: 'entry.1620787326', would_pay: 'entry.1737516922', pricing: 'entry.1696587992', email: 'entry.528614924', source: 'entry.427945262'};
+// exact option text in the Google Form
+const LABEL = {
+  role: {head_chef: 'Head chef', sous_chef: 'Sous chef', cdp: 'Chef de partie (CDP)', commis: 'Commis / apprentice', cook: 'Cook', kitchen_hand: 'Kitchen hand', owner_manager: 'Owner / manager'},
+  kitchen: {restaurant: 'Restaurant', hotel_banquet_events: 'Hotel / banquet / events', cafe: 'Café', catering: 'Catering', pub_club: 'Pub / club', qsr: 'QSR / fast food', institutional: 'Institutional (hospital, aged care, school, mine site)'},
+  prep_now: {paper: 'Paper', whiteboard: 'Whiteboard', excel_sheets: 'Excel / Google Sheets', app: 'An app', in_my_head: 'In my head'},
+  headaches: {rewriting_daily: 'Rewriting the list every day', scaling_pax: 'Scaling recipes to pax / covers', who_does_what: 'Knowing who does what on which section', ordering: 'Working out what to order from suppliers', missed_items: 'Missed or forgotten items', allergens: 'Allergens and dietaries', food_cost: 'Keeping food cost under control', handover: 'Handover between shifts', lost_wet_unreadable: 'Lists get lost, wet or unreadable'},
+  features: {auto_sort_import: 'Auto-sorted prep list from a menu, PDF or spreadsheet', pax_scaling: 'Pax scaling', supplier_order_sheet: 'Supplier order sheet', cost_per_dish: 'Cost per dish', allergen_tags: 'Allergen tags', team_share_qr_link: 'Team share via QR code / link', print_one_page: 'Print on one page', excel_export: 'Excel export', works_offline: 'Works offline'},
+  would_pay: {yes: 'Yes', maybe: 'Maybe', no: 'No'},
+  pricing: {monthly_5_10: 'A$5–10 a month', oneoff_59_79: 'One-off A$59–79', kitchen_199_year: 'Kitchen licence, about A$199 a year', free_only: 'Free only'},
+};
+const form = document.getElementById('survey');
+const q = s => form.querySelectorAll(s);
+const fromParam = (() => { const f = new URLSearchParams(location.search).get('from') || 'direct'; return /^[a-z0-9-]{1,24}$/.test(f) ? f : 'other'; })();
+// "Other" text boxes appear only when their option is picked
+form.addEventListener('change', e => {
+  q('input[data-other]').forEach(i => { const box = document.getElementById(i.dataset.other); const on = i.checked; box.classList.toggle('show', on); if (!on) box.value = ''; });
+  const fs = e.target.closest('fieldset'); if (fs) fs.classList.remove('bad');
+  const max = fs && +fs.dataset.max;
+  if (max && e.target.type === 'checkbox' && e.target.checked && fs.querySelectorAll('input:checked').length > max) { e.target.checked = false; fs.classList.add('bad'); }
+});
+const one = n => { const el = form.querySelector(`input[name="${n}"]:checked`); return el ? el.value : null; };
+const many = n => [...q(`input[name="${n}"]:checked`)].map(i => i.value);
+const txt = (n, max) => (form.elements[n].value || '').trim().slice(0, max);
+function buildPayload(){
+  return {
+    survey: SURVEY_ID, v: 1,
+    role: one('role'), role_other: one('role') === 'other' ? txt('role_other', 80) : '',
+    kitchen: one('kitchen'),
+    prep_now: many('prep_now'),
+    headaches: many('headaches').slice(0, 3), headache_other: many('headaches').includes('other') ? txt('headache_other', 120) : '',
+    features: many('features'),
+    would_pay: one('would_pay'),
+    pricing: one('pricing'),
+    email: txt('email', 120),
+    from: fromParam,
+    website: form.elements.website.value   // honeypot: real people leave it empty
+  };
+}
+// Google Forms field encoding: one param per pick; "Other" = __other_option__ + .other_option_response
+function toFormData(p){
+  const f = new URLSearchParams();
+  const single = k => { if (p[k]) f.append(ENTRY[k], LABEL[k][p[k]]); };
+  if (p.role === 'other') { f.append(ENTRY.role, '__other_option__'); f.append(ENTRY.role + '.other_option_response', p.role_other || 'Other'); } else single('role');
+  single('kitchen');
+  p.prep_now.forEach(v => f.append(ENTRY.prep_now, LABEL.prep_now[v]));
+  p.headaches.forEach(v => { if (v === 'other') { f.append(ENTRY.headaches, '__other_option__'); f.append(ENTRY.headaches + '.other_option_response', p.headache_other || 'Other'); } else f.append(ENTRY.headaches, LABEL.headaches[v]); });
+  p.features.forEach(v => f.append(ENTRY.features, LABEL.features[v]));
+  single('would_pay'); single('pricing');
+  if (p.email) f.append(ENTRY.email, p.email);
+  f.append(ENTRY.source, `${p.from} ${SURVEY_VERSION}`);
+  return f;
+}
+// pre-filled Google Form link (fallback if the background send fails)
+function prefillUrl(p){
+  const f = toFormData(p), u = new URLSearchParams({usp: 'pp_url'});
+  for (const [k, v] of f) {
+    if (k.endsWith('.other_option_response')) u.append(k, v);
+    else if (v === '__other_option__') u.append(k, '__other_option__');
+    else u.append(k, v);
+  }
+  return FORM_VIEW + '?' + u.toString();
+}
+function validate(p){
+  let firstBad = null;
+  q('fieldset').forEach(fs => fs.classList.remove('bad'));
+  const bad = name => { const fs = form.querySelector(`fieldset[data-name="${name}"]`); fs.classList.add('bad'); firstBad = firstBad || fs; };
+  ['role', 'kitchen', 'would_pay'].forEach(n => { if (!p[n]) bad(n); });
+  if (p.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(p.email)) bad('email');
+  if (firstBad) firstBad.scrollIntoView({behavior: 'smooth', block: 'center'});
+  return !firstBad;
+}
+function showThanks(preview){
+  form.style.display = 'none';
+  const t = document.getElementById('thanks'); t.style.display = 'block';
+  document.getElementById('previewNote').hidden = !preview;
+  t.focus(); window.scrollTo(0, 0);
+}
+let sending = false;
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (sending) return;
+  const p = buildPayload(); window.__lastSurveyPayload = p;
+  if (!validate(p)) return;
+  const body = toFormData(p); window.__lastSurveyForm = body.toString();
+  document.getElementById('status').textContent = ''; document.getElementById('fallback').hidden = true;
+  if (p.website) { showThanks(false); return; }  // bot: pretend all is well
+  if (!ENDPOINT) { console.info('Prepline survey preview:', body.toString()); showThanks(true); return; }
+  sending = true; const btn = document.getElementById('sendBtn'); btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    // Google Forms sends no CORS headers, so the reply is opaque ('no-cors'); a rejected fetch = network failure.
+    await fetch(ENDPOINT, {method: 'POST', mode: 'no-cors', body, credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store'});
+    showThanks(false);
+  } catch (err) {
+    document.getElementById('fallbackLink').href = prefillUrl(p);
+    document.getElementById('fallback').hidden = false;
+    document.getElementById('status').textContent = "Sorry, that didn't send (no signal?). Try again, or use the link below.";
+  } finally { sending = false; btn.disabled = false; btn.textContent = 'Send answers'; }
+});
+</script>
+</body>
+</html>
